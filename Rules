@@ -39,7 +39,7 @@ end
 
 route '/assets/style/*/' do
   # path with(out) version
-  item.identifier.chop + '.' + item[:extension]
+  item.identifier.chop + '.css'
 end
 
 route '*' do
