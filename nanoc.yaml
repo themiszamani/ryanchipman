@@ -20,9 +20,12 @@ index_filenames: [ 'index.html' ]
 enable_output_diff: false
 
 deploy:
-  public:
+  default:
     kind: rsync
-    dst:  "rchipman@mit.edu:/afs/athena.mit.edu/user/r/c/rchipman/web_scripts/ryanchipman_test"
+    dst:  "rchipman@athena.dialup.mit.edu:/afs/athena.mit.edu/user/r/c/rchipman/web_scripts/ryanchipman"
+  test:
+    kind: rsync
+    dst:  "rchipman@athena.dialup.mit.edu:/afs/athena.mit.edu/user/r/c/rchipman/web_scripts/ryanchipman_test"
 
 prune:
   # Whether to automatically remove files not managed by nanoc from the output

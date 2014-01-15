@@ -19,6 +19,8 @@ unless defined? LOADED_DEFAULT_CONFIG
   Compass.add_project_configuration 'compass/config.rb' 
 end
 
+require 'susy'
+
 ### Routing ##################################################################
 
 route '/static/*' do
