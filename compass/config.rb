@@ -1,11 +1,11 @@
 # Require any additional compass plugins here.
-
+#compass config file
 # Set this to the root of your project when deployed:
 http_path = "/"
 project_path = "."
 css_dir = "/output/assets/style"
 sass_dir = "/content/assets/style"
-images_dir = "/output/assets/images"
+images_dir = "/static/assets/images"
 javascripts_dir = "/output/assets/javascript"
 output_style = :expanded
 

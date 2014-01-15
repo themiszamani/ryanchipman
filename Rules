@@ -30,14 +30,14 @@ route '/404/' do
   '/404.html'
 end
 
-route '/assets/style/_*/' do
+route '/assets/style/partials/*/' do
   # Don't output partials, so return nil
   nil
 end
 
 route '/assets/style/*/' do
   # path with(out) version
-  '/assets/style.css'
+  item.identifier.chop + '.' + item[:extension]
 end
 
 route '*' do
@@ -56,7 +56,7 @@ end
 
 ### Compilation ##############################################################
 
-compile '/assets/style/_*/' do
+compile '/assets/style/partials/*/' do
   # Don’t compile partials
 end
 
