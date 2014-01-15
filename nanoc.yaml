@@ -19,6 +19,11 @@ index_filenames: [ 'index.html' ]
 # before and after the last site compilation.
 enable_output_diff: false
 
+deploy:
+  public:
+    kind: rsync
+    dst:  "rchipman@mit.edu:/afs/athena.mit.edu/user/r/c/rchipman/web_scripts/ryanchipman_test"
+
 prune:
   # Whether to automatically remove files not managed by nanoc from the output
   # directory. For safety reasons, this is turned off by default.

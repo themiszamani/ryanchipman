@@ -1,0 +1,229 @@
+Crashlog created at 2014-01-15 14:58:03 -0500
+
+===== MESSAGE:
+
+RuntimeError: command exited with a nonzero status code 255 (command: rsync -glpPrtvz --exclude=".hg" --exclude=".svn" --exclude=".git" output/ rchipman@mit.edu:/afs/athena.mit.edu/user/r/c/rchipman/web_scripts/ryanchipman_test)
+
+===== COMPILATION STACK:
+
+  (empty)
+
+===== STACK TRACE:
+
+  0. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/extra/deployers/rsync.rb:60:in `run_shell_cmd'
+  1. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/extra/deployers/rsync.rb:50:in `run'
+  2. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/commands/deploy.rb:89:in `run'
+  3. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  4. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  5. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  6. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:13:in `call'
+  7. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib/cri/command_dsl.rb:185:in `block in runner'
+  8. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib/cri/command.rb:298:in `call'
+  9. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib/cri/command.rb:298:in `run_this'
+  10. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib/cri/command.rb:251:in `run'
+  11. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib/cri/command.rb:264:in `run'
+  12. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli.rb:59:in `block in run'
+  13. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  14. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  15. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli.rb:57:in `run'
+  16. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/bin/nanoc:19:in `<top (required)>'
+  17. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin/nanoc:23:in `load'
+  18. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin/nanoc:23:in `<main>'
+  19. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:15:in `eval'
+  ... 22 more lines omitted. See full crash log for details.
+
+===== VERSION INFORMATION:
+
+nanoc 3.6.7 © 2007-2013 Denis Defreyne.
+Running ruby 2.0.0 (2013-06-27) on x86_64-linux with RubyGems 2.0.3.
+
+===== SYSTEM INFORMATION:
+
+Linux rchipman-laptop 3.11.0-15-generic #23-Ubuntu SMP Mon Dec 9 18:17:04 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+
+===== INSTALLED GEMS:
+
+  actionmailer 4.0.0
+  actionpack 4.0.0
+  activemodel 4.0.0
+  activerecord 4.0.0
+  activerecord-deprecated_finders 1.0.3
+  activesupport 4.0.0
+  adsf 1.2.0
+  arel 4.0.0, 4.0.1
+  atomic 1.1.14
+  bcrypt-ruby 3.0.1
+  bourbon 3.1.8
+  builder 3.1.4
+  bundler 1.3.5
+  bundler-unload 1.0.2
+  celluloid 0.15.2
+  chunky_png 1.2.8
+  coderay 1.1.0
+  coffee-rails 4.0.0, 4.0.1
+  coffee-script 2.2.0
+  coffee-script-source 1.6.3
+  colored 1.2
+  compass 0.12.2
+  compass-rails 1.0.3, 2.0.alpha.0
+  cri 2.4.1
+  erubis 2.7.0
+  execjs 2.0.1, 2.0.2
+  executable-hooks 1.2.5
+  ffi 1.9.3
+  formatador 0.2.4
+  fssm 0.2.10
+  guard 2.2.5
+  guard-nanoc 1.0.2
+  hike 1.2.3
+  i18n 0.6.5
+  jbuilder 1.5.1, 1.5.2
+  jquery-rails 3.0.4
+  json 1.8.0, 1.8.1
+  jwt 0.1.8
+  kgio 2.8.1
+  listen 2.4.0
+  lumberjack 1.0.4
+  mail 2.5.4
+  method_source 0.8.2
+  mime-types 1.25
+  minitest 4.7.5
+  multi_json 1.8.0, 1.8.2
+  nanoc 3.6.7
+  neat 1.4.0
+  normalize-rails 2.1.1
+  pg 0.17.0
+  polyglot 0.3.3
+  pry 0.9.12.4
+  rack 1.5.2
+  rack-test 0.6.2
+  rails 4.0.0
+  rails_12factor 0.0.2
+  rails_serve_static_assets 0.0.1
+  rails_stdout_logging 0.0.3
+  railties 4.0.0
+  raindrops 0.12.0
+  rake 10.1.0
+  rb-fsevent 0.9.4
+  rb-inotify 0.9.3
+  rdoc 3.12.2
+  rubygems-bundler 1.3.4
+  rvm 1.11.3.8
+  sass 3.2.10, 3.2.12
+  sass-rails 4.0.0, 4.0.1
+  sdoc 0.3.20
+  slop 3.4.7
+  sprockets 2.10.0
+  sprockets-rails 2.0.0, 2.0.1
+  sqlite3 1.3.8
+  systemu 2.6.0
+  thor 0.18.1
+  thread_safe 0.1.3
+  tilt 1.4.1
+  timers 1.1.0
+  treetop 1.4.15
+  turbolinks 1.3.0
+  twilio-ruby 3.11.4
+  tzinfo 0.3.37, 0.3.38
+  uglifier 2.2.1, 2.3.0
+  unicorn 4.6.3
+
+===== ENVIRONMENT:
+
+CLUTTER_IM_MODULE => "xim"
+COLORTERM => "gnome-terminal"
+COMPIZ_CONFIG_PROFILE => "ubuntu"
+DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-zC4udZPe3v"
+DEFAULTS_PATH => "/usr/share/gconf/ubuntu.default.path"
+DESKTOP_SESSION => "ubuntu"
+DISPLAY => ":0"
+GDMSESSION => "ubuntu"
+GDM_LANG => "en_US"
+GEM_HOME => "/home/rchipman/.rvm/gems/ruby-2.0.0-p247"
+GEM_PATH => "/home/rchipman/.rvm/gems/ruby-2.0.0-p247:/home/rchipman/.rvm/gems/ruby-2.0.0-p247@global"
+GNOME_DESKTOP_SESSION_ID => "this-is-deprecated"
+GNOME_KEYRING_CONTROL => "/run/user/1000/keyring-KdAeSr"
+GNOME_KEYRING_PID => "1984"
+GPG_AGENT_INFO => "/run/user/1000/keyring-KdAeSr/gpg:0:1"
+GTK_IM_MODULE => "ibus"
+GTK_MODULES => "overlay-scrollbar:unity-gtk-module"
+HOME => "/home/rchipman"
+IM_CONFIG_PHASE => "1"
+INSTANCE => ""
+IRBRC => "/home/rchipman/.rvm/rubies/ruby-2.0.0-p247/.irbrc"
+JOB => "gnome-session"
+LANG => "en_US.UTF-8"
+LANGUAGE => "en_US"
+LESSCLOSE => "/usr/bin/lesspipe %s %s"
+LESSOPEN => "| /usr/bin/lesspipe %s"
+LOGNAME => "rchipman"
+LS_COLORS => "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:"
+MANDATORY_PATH => "/usr/share/gconf/ubuntu.mandatory.path"
+MY_RUBY_HOME => "/home/rchipman/.rvm/rubies/ruby-2.0.0-p247"
+OLDPWD => "/home/rchipman/Development/nanoc-workspace/ryanchipman/compass"
+PATH => "~/Development/android/sdk/platform-tools:/usr/local/heroku/bin:/home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin:/home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/bin:/home/rchipman/.rvm/rubies/ruby-2.0.0-p247/bin:/home/rchipman/.rvm/bin:~/Development/android/sdk/platform-tools:/usr/local/heroku/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/rchipman/Development/arduino-workspace/scripts:/home/rchipman/.rvm/bin:/home/rchipman/Development/arduino-workspace/scripts"
+PWD => "/home/rchipman/Development/nanoc-workspace/ryanchipman"
+QT4_IM_MODULE => "xim"
+RUBY_VERSION => "ruby-2.0.0-p247"
+SESSIONTYPE => "gnome-session"
+SHELL => "/bin/bash"
+SHLVL => "1"
+SSH_AGENT_PID => "2056"
+SSH_AUTH_SOCK => "/run/user/1000/keyring-KdAeSr/ssh"
+TERM => "xterm"
+TEXTDOMAIN => "im-config"
+TEXTDOMAINDIR => "/usr/share/locale/"
+UBUNTU_MENUPROXY => "1"
+UPSTART_EVENTS => "started starting"
+UPSTART_INSTANCE => ""
+UPSTART_JOB => "gnome-settings-daemon"
+UPSTART_SESSION => "unix:abstract=/com/ubuntu/upstart-session/1000/1986"
+USER => "rchipman"
+VTE_VERSION => "3406"
+WINDOWID => "65011873"
+XAUTHORITY => "/home/rchipman/.Xauthority"
+XDG_CONFIG_DIRS => "/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg"
+XDG_CURRENT_DESKTOP => "Unity"
+XDG_DATA_DIRS => "/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/"
+XDG_RUNTIME_DIR => "/run/user/1000"
+XDG_SEAT => "seat0"
+XDG_SEAT_PATH => "/org/freedesktop/DisplayManager/Seat0"
+XDG_SESSION_ID => "c2"
+XDG_SESSION_PATH => "/org/freedesktop/DisplayManager/Session0"
+XDG_VTNR => "7"
+XMODIFIERS => "@im=ibus"
+_ => "/home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin/nanoc"
+_ORIGINAL_GEM_PATH => "/home/rchipman/.rvm/gems/ruby-2.0.0-p247:/home/rchipman/.rvm/gems/ruby-2.0.0-p247@global"
+__rvm_date => "() {  \\date \"$@\" || return $?\n}"
+_system_arch => "x86_64"
+_system_name => "Ubuntu"
+_system_type => "Linux"
+_system_version => "13.10"
+rvm_bin_path => "/home/rchipman/.rvm/bin"
+rvm_path => "/home/rchipman/.rvm"
+rvm_prefix => "/home/rchipman"
+rvm_version => "1.22.8 (stable)"
+
+===== LOAD PATHS:
+
+  0. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib
+  1. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/executable-hooks-1.2.5/lib
+  2. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/bundler-unload-1.0.2/lib
+  3. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/rubygems-bundler-1.3.4/lib
+  4. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/bundler-1.3.5/lib
+  5. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/colored-1.2/lib
+  6. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib
+  7. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib
+  8. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/chunky_png-1.2.8/lib
+  9. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib
+  10. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib
+  11. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib
+  12. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/systemu-2.6.0/lib
+  13. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0
+  14. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0/x86_64-linux
+  15. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby
+  16. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby/2.0.0
+  17. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby/2.0.0/x86_64-linux
+  18. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby
+  19. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0
+  20. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/x86_64-linux
