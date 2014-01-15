@@ -1,4 +1,4 @@
-{:	data{I"/:ET{:default{	:	lastI"<!DOCTYPE HTML>
+{:	data{I"/:ET{:default{	:	lastI"<!DOCTYPE HTML>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -388,4 +388,11 @@ a:hover {
 
   line-height: 20px;
 }
-;T;@:versioni
+;T;@I"/assets/style/style/;T{;{;I"M/* line 1, content/assets/style/style.scss */
+h1 {
+  font-size: 10px;
+}
+;T;	I"h1 {
+	font-size: 10px;
+};T;
+@:versioni

@@ -1,8 +1,9 @@
-Crashlog created at 2014-01-15 14:58:03 -0500
+Crashlog created at 2014-01-15 15:37:20 -0500
 
 ===== MESSAGE:
 
-RuntimeError: command exited with a nonzero status code 255 (command: rsync -glpPrtvz --exclude=".hg" --exclude=".svn" --exclude=".git" output/ rchipman@mit.edu:/afs/athena.mit.edu/user/r/c/rchipman/web_scripts/ryanchipman_test)
+LoadError: cannot load such file -- nokogiri
+Install the 'nokogiri' gem using `gem install nokogiri`.
 
 ===== COMPILATION STACK:
 
@@ -10,27 +11,51 @@ RuntimeError: command exited with a nonzero status code 255 (command: rsync -glp
 
 ===== STACK TRACE:
 
-  0. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/extra/deployers/rsync.rb:60:in `run_shell_cmd'
-  1. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/extra/deployers/rsync.rb:50:in `run'
-  2. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/commands/deploy.rb:89:in `run'
-  3. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:14:in `block in call'
-  4. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  5. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  6. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:13:in `call'
-  7. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib/cri/command_dsl.rb:185:in `block in runner'
-  8. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib/cri/command.rb:298:in `call'
-  9. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib/cri/command.rb:298:in `run_this'
-  10. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib/cri/command.rb:251:in `run'
-  11. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib/cri/command.rb:264:in `run'
-  12. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli.rb:59:in `block in run'
-  13. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  14. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  15. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/cli.rb:57:in `run'
-  16. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/bin/nanoc:19:in `<top (required)>'
-  17. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin/nanoc:23:in `load'
-  18. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin/nanoc:23:in `<main>'
-  19. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:15:in `eval'
-  ... 22 more lines omitted. See full crash log for details.
+  0. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:45:in `require'
+  1. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:45:in `require'
+  2. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/filters/relativize_paths.rb:46:in `run'
+  3. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/compilation/filter.rb:122:in `setup_and_run'
+  4. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/result_data/item_rep.rb:344:in `filter'
+  5. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/compilation/item_rep_proxy.rb:47:in `filter'
+  6. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/compilation/rule_context.rb:55:in `filter'
+  7. ./Rules:89:in `block in load'
+  8. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/compilation/rule.rb:68:in `instance_eval'
+  9. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/compilation/rule.rb:68:in `apply_to'
+  10. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:384:in `compile_rep'
+  11. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:340:in `block in compile_reps'
+  12. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:333:in `loop'
+  13. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:333:in `compile_reps'
+  14. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:89:in `run'
+  15. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:58:in `compile'
+  16. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-nanoc-1.0.2/lib/guard/nanoc.rb:65:in `block in recompile'
+  17. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-nanoc-1.0.2/lib/guard/nanoc.rb:63:in `chdir'
+  18. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-nanoc-1.0.2/lib/guard/nanoc.rb:63:in `recompile'
+  19. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-nanoc-1.0.2/lib/guard/nanoc.rb:28:in `run_on_changes'
+  20. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:67:in `block in run_supervised_task'
+  21. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:65:in `catch'
+  22. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:65:in `run_supervised_task'
+  23. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:109:in `block in _run_first_task_found'
+  24. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:107:in `each'
+  25. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:107:in `_run_first_task_found'
+  26. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:47:in `block in run_on_changes'
+  27. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:140:in `block (3 levels) in _scoped_plugins'
+  28. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:138:in `each'
+  29. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:138:in `block (2 levels) in _scoped_plugins'
+  30. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:137:in `catch'
+  31. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:137:in `block in _scoped_plugins'
+  32. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:135:in `each'
+  33. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:135:in `_scoped_plugins'
+  34. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/runner.rb:40:in `run_on_changes'
+  35. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/setuper.rb:189:in `block (2 levels) in _setup_listener'
+  36. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/commander.rb:108:in `block in within_preserved_state'
+  37. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/commander.rb:105:in `synchronize'
+  38. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/commander.rb:105:in `within_preserved_state'
+  39. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib/guard/setuper.rb:188:in `block in _setup_listener'
+  40. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.4.0/lib/listen/listener.rb:150:in `call'
+  41. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.4.0/lib/listen/listener.rb:150:in `block in _wait_for_changes'
+  42. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.4.0/lib/listen/listener.rb:145:in `loop'
+  43. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.4.0/lib/listen/listener.rb:145:in `_wait_for_changes'
+  ... 46 more lines omitted. See full crash log for details.
 
 ===== VERSION INFORMATION:
 
@@ -116,7 +141,6 @@ Linux rchipman-laptop 3.11.0-15-generic #23-Ubuntu SMP Mon Dec 9 18:17:04 UTC 20
   sprockets 2.10.0
   sprockets-rails 2.0.0, 2.0.1
   sqlite3 1.3.8
-  systemu 2.6.0
   thor 0.18.1
   thread_safe 0.1.3
   tilt 1.4.1
@@ -132,6 +156,7 @@ Linux rchipman-laptop 3.11.0-15-generic #23-Ubuntu SMP Mon Dec 9 18:17:04 UTC 20
 
 CLUTTER_IM_MODULE => "xim"
 COLORTERM => "gnome-terminal"
+COLUMNS => "80"
 COMPIZ_CONFIG_PROFILE => "ubuntu"
 DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-zC4udZPe3v"
 DEFAULTS_PATH => "/usr/share/gconf/ubuntu.default.path"
@@ -147,6 +172,8 @@ GNOME_KEYRING_PID => "1984"
 GPG_AGENT_INFO => "/run/user/1000/keyring-KdAeSr/gpg:0:1"
 GTK_IM_MODULE => "ibus"
 GTK_MODULES => "overlay-scrollbar:unity-gtk-module"
+GUARD_NOTIFIERS => "---\n- :name: :notifysend\n  :options:\n    :silent: true\n- :name: :terminal_title\n  :options:\n    :silent: true\n"
+GUARD_NOTIFY => "true"
 HOME => "/home/rchipman"
 IM_CONFIG_PHASE => "1"
 INSTANCE => ""
@@ -156,11 +183,12 @@ LANG => "en_US.UTF-8"
 LANGUAGE => "en_US"
 LESSCLOSE => "/usr/bin/lesspipe %s %s"
 LESSOPEN => "| /usr/bin/lesspipe %s"
+LINES => "24"
 LOGNAME => "rchipman"
 LS_COLORS => "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:"
 MANDATORY_PATH => "/usr/share/gconf/ubuntu.mandatory.path"
 MY_RUBY_HOME => "/home/rchipman/.rvm/rubies/ruby-2.0.0-p247"
-OLDPWD => "/home/rchipman/Development/nanoc-workspace/ryanchipman/compass"
+OLDPWD => "/home/rchipman/Development/nanoc-workspace/tutorial"
 PATH => "~/Development/android/sdk/platform-tools:/usr/local/heroku/bin:/home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin:/home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/bin:/home/rchipman/.rvm/rubies/ruby-2.0.0-p247/bin:/home/rchipman/.rvm/bin:~/Development/android/sdk/platform-tools:/usr/local/heroku/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/rchipman/Development/arduino-workspace/scripts:/home/rchipman/.rvm/bin:/home/rchipman/Development/arduino-workspace/scripts"
 PWD => "/home/rchipman/Development/nanoc-workspace/ryanchipman"
 QT4_IM_MODULE => "xim"
@@ -180,7 +208,7 @@ UPSTART_JOB => "gnome-settings-daemon"
 UPSTART_SESSION => "unix:abstract=/com/ubuntu/upstart-session/1000/1986"
 USER => "rchipman"
 VTE_VERSION => "3406"
-WINDOWID => "65011873"
+WINDOWID => "65011822"
 XAUTHORITY => "/home/rchipman/.Xauthority"
 XDG_CONFIG_DIRS => "/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg"
 XDG_CURRENT_DESKTOP => "Unity"
@@ -192,7 +220,7 @@ XDG_SESSION_ID => "c2"
 XDG_SESSION_PATH => "/org/freedesktop/DisplayManager/Session0"
 XDG_VTNR => "7"
 XMODIFIERS => "@im=ibus"
-_ => "/home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin/nanoc"
+_ => "/home/rchipman/.rvm/gems/ruby-2.0.0-p247/bin/guard"
 _ORIGINAL_GEM_PATH => "/home/rchipman/.rvm/gems/ruby-2.0.0-p247:/home/rchipman/.rvm/gems/ruby-2.0.0-p247@global"
 __rvm_date => "() {  \\date \"$@\" || return $?\n}"
 _system_arch => "x86_64"
@@ -206,24 +234,38 @@ rvm_version => "1.22.8 (stable)"
 
 ===== LOAD PATHS:
 
-  0. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib
-  1. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/executable-hooks-1.2.5/lib
-  2. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/bundler-unload-1.0.2/lib
-  3. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/rubygems-bundler-1.3.4/lib
-  4. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/bundler-1.3.5/lib
-  5. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/colored-1.2/lib
-  6. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib
-  7. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib
-  8. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/chunky_png-1.2.8/lib
-  9. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib
-  10. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib
-  11. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib
-  12. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/systemu-2.6.0/lib
-  13. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0
-  14. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0/x86_64-linux
-  15. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby
-  16. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby/2.0.0
-  17. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby/2.0.0/x86_64-linux
-  18. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby
-  19. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0
-  20. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/x86_64-linux
+  0. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/executable-hooks-1.2.5/lib
+  1. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/bundler-unload-1.0.2/lib
+  2. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/rubygems-bundler-1.3.4/lib
+  3. /home/rchipman/.rvm/gems/ruby-2.0.0-p247@global/gems/bundler-1.3.5/lib
+  4. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/thor-0.18.1/lib
+  5. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/timers-1.1.0/lib
+  6. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/celluloid-0.15.2/lib
+  7. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/rb-fsevent-0.9.4/lib
+  8. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/ffi-1.9.3/lib
+  9. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/ffi-1.9.3/ext/ffi_c
+  10. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/rb-inotify-0.9.3/lib
+  11. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.4.0/lib
+  12. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/coderay-1.1.0/lib
+  13. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/slop-3.4.7/lib
+  14. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/method_source-0.8.2/lib
+  15. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/pry-0.9.12.4/lib
+  16. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/lumberjack-1.0.4/lib
+  17. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/formatador-0.2.4/lib
+  18. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-2.2.5/lib
+  19. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/colored-1.2/lib
+  20. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.1/lib
+  21. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.7/lib
+  22. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/guard-nanoc-1.0.2/lib
+  23. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/chunky_png-1.2.8/lib
+  24. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib
+  25. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib
+  26. /home/rchipman/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib
+  27. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0
+  28. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0/x86_64-linux
+  29. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby
+  30. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby/2.0.0
+  31. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby/2.0.0/x86_64-linux
+  32. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby
+  33. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0
+  34. /home/rchipman/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/x86_64-linux
