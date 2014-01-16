@@ -8,7 +8,9 @@ css_dir = "/output/assets/style"
 sass_dir = "/content/assets/style"
 images_dir = "/static/assets/images"
 javascripts_dir = "/output/assets/javascript"
+http_fonts_path = "/assets/fonts"
 output_style = :expanded
+# relative_assets = true
 
 sass_options = {
   :syntax => :scss

@@ -22,6 +22,8 @@ $white: #FFF;
 
 $nav-height: 60px;
 
+@include font-face("Telegrafico", font-files("telegrafico.woff", "telegrafico.eot", "telegrafico.ttf", "telegrafico.svg"));
+
 body {
 	background-color: $gray;
 	.page {
@@ -29,6 +31,15 @@ body {
 		@include susy-grid-background;
 		background-color: $light-gray;
 		header {
+			.title {
+				@include span-columns(8);
+				@include push(3);
+				text-align: center;
+				font-family: Telegrafico;
+				color: $white;
+				font-size: 69px;
+				clear: both;
+			}
 			nav {
 				@include span-columns(8);
 				@include push(3);
