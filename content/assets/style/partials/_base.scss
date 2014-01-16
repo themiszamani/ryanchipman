@@ -22,7 +22,7 @@ $white: #FFF;
 
 $nav-height: 60px;
 $title-font-size: 1.35*$column-width;
-$nav-tab-font-size: .45*$column-width; 
+$nav-tab-font-size: .35*$column-width; 
 $nav-tab-radius: 10px;
 
 /* Other */
@@ -34,7 +34,6 @@ $fonts: Telegrafico;
 body {
 	background-color: $gray;
 	text-align: center;
-	vertical-align: center;
 	font-family: $fonts;
 	color: $white;
 	.page {
@@ -57,9 +56,11 @@ body {
 				height: $nav-height;
 				clear: both;
 				.nav-tab {
-					display: inline;
 					font-size: $nav-tab-font-size;
 					height: $nav-height;
+					@include with-grid-settings(4,25%,0%,0%) {
+						@include span-columns(1);
+					}
 					&#nav-left {
 						background-color: $blue;
 						@include border-bottom-left-radius($nav-tab-radius);
@@ -73,6 +74,9 @@ body {
 					&#nav-right {
 						background-color: $red;
 						@include border-bottom-right-radius($nav-tab-radius);
+					}
+					p {
+						padding-top: 12%;
 					}
 				}
 			}
@@ -89,4 +93,8 @@ body {
 			clear: both;
 		}
 	}
+}
+
+a {
+	color: $white;
 }
