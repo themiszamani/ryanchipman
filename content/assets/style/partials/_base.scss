@@ -38,8 +38,9 @@ body {
 	color: $white;
 	.page {
 		@include container($total-columns);
-		@include susy-grid-background;
+		// @include susy-grid-background;
 		background-color: $light-gray;
+		padding-bottom: 2.5em;
 		header {
 			.title {
 				@include span-columns(8);
