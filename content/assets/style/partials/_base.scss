@@ -1,26 +1,54 @@
 @import "susy";
+@import "compass/css3";
 
-$total-columns: 12;
+/* Susy constants */
+
+$total-columns: 14;
 $column-width: 4em;
 $gutter-width: 1em;
 $grid-padding: $gutter-width;
 
+/* Colors */
+
+$gray: #292929;
+$light-gray: #323232;
+$red: #F24632;
+$orange: #F27B1A;
+$green: #7BA825;
+$blue: #3F9BBF;
+$white: #FFF;
+
+/* Dimensions */
+
+$nav-height: 60px;
+
 body {
+	background-color: $gray;
 	.page {
-		@include container;
-		.nav {
-			@include span-columns(6 of 12);
-			@include prefix(3);
+		@include container($total-columns);
+		@include susy-grid-background;
+		background-color: $light-gray;
+		header {
+			nav {
+				@include span-columns(8);
+				@include push(3);
+				@include border-bottom-right-radius(10);
+				@include border-bottom-right-radius(10);
+				background-color: $white;
+				height: $nav-height;
+				clear: both;
+			}
 		}
 		.main {
-			@include span-columns(10 of 12);
-			@include prefix(1);
+			@include span-columns(8,14);
 		}
 		.sidebar {
-
+			@include span-columns(3,14);
 		}
 		.footer {
-
+			@include span-columns(8);
+			@include push(3);
+			clear: both;
 		}
 	}
 }
