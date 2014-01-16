@@ -75,6 +75,10 @@ body {
 						background-color: $red;
 						@include border-bottom-right-radius($nav-tab-radius);
 					}
+					&:hover {
+						height: 1.5*$nav-height;
+						@include opacity(.75);
+					}
 					p {
 						padding-top: 12%;
 					}
