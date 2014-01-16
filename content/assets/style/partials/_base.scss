@@ -29,7 +29,7 @@ $nav-tab-radius: 10px;
 
 $fonts: Telegrafico;
 
-@include font-face(Telegrafico, font-files("telegrafico.woff", "telegrafico.eot", "telegrafico.ttf", "telegrafico.svg"));
+@include font-face(Telegrafico, font-files("/assets/fonts/telegrafico.woff", "/assets/fonts/telegrafico.eot", "/assets/fonts/telegrafico.ttf", "/assets/fonts/telegrafico.svg"));
 
 body {
 	background-color: $gray;
