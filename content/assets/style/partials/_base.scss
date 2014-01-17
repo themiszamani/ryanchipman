@@ -12,18 +12,23 @@ $grid-padding: $gutter-width;
 
 $gray: #292929;
 $light-gray: #323232;
-$font-gray: #505050;
+$font-gray: #777777;
+$font-black: #444444;
 $red: #F24632;
 $orange: #F27B1A;
 $green: #7BA825;
 $blue: #3F9BBF;
 $white: #FFF;
+$off-white: #E5E5E5;
 
 /* Dimensions */
 
 $nav-height: 60px;
 $nav-hover-height: 1.4*$nav-height;
-$title-font-size: 1.35*$column-width;
+$headline-font-size: 1.35*$column-width;
+$title-font-size: .67*$column-width;
+$section-font-size: .5*$column-width;
+$body-font-size: .35*$column-width;
 $nav-tab-font-size: .35*$column-width; 
 $nav-tab-radius: 10px;
 $border-thickness: $nav-hover-height - $nav-height;
@@ -33,15 +38,40 @@ $content-box-radius: 1.2*$border-thickness;
 
 $title-fonts: Telegrafico;
 $header-fonts: Arial;
-$body-fonts: "Times New Roman";
+$body-fonts: "Open Sans", "Droid Sans", Dosis, Rosario, "Times New Roman";
 
 @include font-face(Telegrafico, font-files("/assets/fonts/telegrafico.woff", "/assets/fonts/telegrafico.eot", "/assets/fonts/telegrafico.ttf", "/assets/fonts/telegrafico.svg"));
+@include font-face(Rosario, font-files("/assets/fonts/rosario-regular-webfont.woff", "/assets/fonts/rosario-regular-webfont.eot", "/assets/fonts/rosario-regular-webfont.ttf", "/assets/fonts/rosario-regular-webfont.svg"));
 
 @mixin content-box {
-	background-color: $white;
-	color: $font-gray;
+	background-color: $off-white;
+	color: $font-black;
 	font-family: $body-fonts;
+	font-size: $body-font-size;
+	padding: 1em;
 	@include border-radius($content-box-radius);
+	h1 {
+		color: $font-black;
+		font-size: $title-font-size;
+		text-align: left;
+		margin-bottom: .35em;
+	}
+	h2 {
+		color: $font-gray;
+		font-size: $section-font-size;
+		font-weight: 500;
+		text-align: left;
+		margin-bottom: .32em;
+	}
+	p {
+		text-align: justify;
+		margin-top: .2em;
+	}
+}
+
+@mixin inset-box {
+	background-color: $white;
+	border: 3px inset $off-white;
 }
 
 body {
@@ -49,16 +79,17 @@ body {
 	text-align: center;
 	font-family: $title-fonts;
 	color: $white;
+	@include border-box-sizing;
 	.page {
 		@include container($total-columns);
-		// @include susy-grid-background;
+		@include susy-grid-background;
 		background-color: $light-gray;
 		padding-bottom: 2.5em;
 		header {
 			.title {
 				@include span-columns(8, 16);
 				@include push(4);
-				font-size: $title-font-size;
+				font-size: $headline-font-size;
 				clear: both;
 			}
 			nav {
@@ -103,6 +134,9 @@ body {
 			@include span-columns(12,16);
 			@include push(2);
 			@include content-box;
+			.content-section {
+
+			}
 		}
 		.sidebar {
 			@include span-columns(4,16);
