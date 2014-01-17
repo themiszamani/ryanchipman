@@ -12,6 +12,7 @@ $grid-padding: $gutter-width;
 
 $gray: #292929;
 $light-gray: #323232;
+$font-gray: #505050;
 $red: #F24632;
 $orange: #F27B1A;
 $green: #7BA825;
@@ -21,20 +22,32 @@ $white: #FFF;
 /* Dimensions */
 
 $nav-height: 60px;
+$nav-hover-height: 1.4*$nav-height;
 $title-font-size: 1.35*$column-width;
 $nav-tab-font-size: .35*$column-width; 
 $nav-tab-radius: 10px;
+$border-thickness: $nav-hover-height - $nav-height;
+$content-box-radius: 1.2*$border-thickness;
 
 /* Other */
 
-$fonts: Telegrafico;
+$title-fonts: Telegrafico;
+$header-fonts: Arial;
+$body-fonts: "Times New Roman";
 
 @include font-face(Telegrafico, font-files("/assets/fonts/telegrafico.woff", "/assets/fonts/telegrafico.eot", "/assets/fonts/telegrafico.ttf", "/assets/fonts/telegrafico.svg"));
+
+@mixin content-box {
+	background-color: $white;
+	color: $font-gray;
+	font-family: $body-fonts;
+	@include border-radius($content-box-radius);
+}
 
 body {
 	background-color: $gray;
 	text-align: center;
-	font-family: $fonts;
+	font-family: $title-fonts;
 	color: $white;
 	.page {
 		@include container($total-columns);
@@ -43,13 +56,13 @@ body {
 		padding-bottom: 2.5em;
 		header {
 			.title {
-				@include span-columns(8);
+				@include span-columns(8, 16);
 				@include push(4);
 				font-size: $title-font-size;
 				clear: both;
 			}
 			nav {
-				@include span-columns(8);
+				@include span-columns(8, 16);
 				@include push(4);
 				@include border-bottom-right-radius($nav-tab-radius);
 				@include border-bottom-left-radius($nav-tab-radius);
@@ -60,7 +73,7 @@ body {
 					font-size: $nav-tab-font-size;
 					height: $nav-height;
 					@include with-grid-settings(4,25%,0%,0%) {
-						@include span-columns(1);
+						@include span-columns(1, 4);
 					}
 					&#nav-left {
 						background-color: $blue;
@@ -77,7 +90,7 @@ body {
 						@include border-bottom-right-radius($nav-tab-radius);
 					}
 					&:hover {
-						height: 1.5*$nav-height;
+						height: $nav-hover-height;
 						@include opacity(.75);
 					}
 					p {
@@ -86,18 +99,33 @@ body {
 				}
 			}
 		}
-		.main {
-			@include span-columns(8,16);
+		#main {
+			@include span-columns(12,16);
+			@include push(2);
+			@include content-box;
 		}
 		.sidebar {
 			@include span-columns(4,16);
 		}
 		.footer {
-			@include span-columns(8);
+			@include span-columns(8,16);
 			@include push(4);
 			clear: both;
 		}
 	}
+}
+
+.about {
+	border: $border-thickness solid $blue;
+}
+.projects {
+	border: $border-thickness solid $green;
+}
+.tutorials {
+	border: $border-thickness solid $orange;
+}
+.contact {
+	border: $border-thickness solid $red;
 }
 
 a {

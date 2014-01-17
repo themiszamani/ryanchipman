@@ -22,10 +22,10 @@ enable_output_diff: false
 deploy:
   default:
     kind: rsync
-    dst:  "rchipman@athena.dialup.mit.edu:/afs/athena.mit.edu/user/r/c/rchipman/web_scripts/ryanchipman"
+    dst:  "scripts.mit.edu:ryanchipman"
   test:
     kind: rsync
-    dst:  "rchipman@athena.dialup.mit.edu:/afs/athena.mit.edu/user/r/c/rchipman/web_scripts/ryanchipman_test"
+    dst:  "scripts.mit.edu:ryanchipman_test"
 
 prune:
   # Whether to automatically remove files not managed by nanoc from the output
