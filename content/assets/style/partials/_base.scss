@@ -27,8 +27,8 @@ $nav-height: 60px;
 $nav-hover-height: 1.4*$nav-height;
 $headline-font-size: 1.35*$column-width;
 $title-font-size: .67*$column-width;
-$section-font-size: .5*$column-width;
-$body-font-size: .35*$column-width;
+$section-font-size: .48*$column-width;
+$body-font-size: .32*$column-width;
 $nav-tab-font-size: .35*$column-width; 
 $nav-tab-radius: 10px;
 $border-thickness: $nav-hover-height - $nav-height;
@@ -48,24 +48,27 @@ $body-fonts: "Open Sans", "Droid Sans", Dosis, Rosario, "Times New Roman";
 	color: $font-black;
 	font-family: $body-fonts;
 	font-size: $body-font-size;
-	padding: 1em;
+	padding: 0 1em .5em 1em;
 	@include border-radius($content-box-radius);
 	h1 {
 		color: $font-black;
 		font-size: $title-font-size;
 		text-align: left;
-		margin-bottom: .35em;
+		margin-top: .5rem;
+		margin-bottom: .5rem;
 	}
 	h2 {
 		color: $font-gray;
 		font-size: $section-font-size;
 		font-weight: 500;
 		text-align: left;
-		margin-bottom: .32em;
+		margin-top: .45rem;
+		margin-bottom: .45rem;
 	}
 	p {
-		text-align: justify;
-		margin-top: .2em;
+		text-align: left;
+		margin-top: .35rem;
+		margin-bottom: .35rem;
 	}
 }
 
