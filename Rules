@@ -114,7 +114,7 @@ compile '*' do
   when 'filter', 'helper'
     layout '/autodoc/'
   end
-  layout '/default/'
+  layout '/tab/'
 
   # filter :add_toc
   filter :colorize_syntax, :is_fullpage => true

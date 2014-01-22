@@ -1,5 +1,5 @@
 <% render 'default' do %>
-  <div class=''>
-    
+  <div id="main" class="<%= item_category(@item) %>">
+    <%= yield %>
   </div>
 <% end %>

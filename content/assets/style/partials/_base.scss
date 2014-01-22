@@ -24,7 +24,7 @@ $off-white: #E5E5E5;
 /* Dimensions */
 
 $nav-height: 60px;
-$nav-hover-height: 1.4*$nav-height;
+$nav-hover-height: 1.2*$nav-height;
 $headline-font-size: 1.35*$column-width;
 $title-font-size: .67*$column-width;
 $section-font-size: .48*$column-width;
@@ -38,10 +38,14 @@ $content-box-radius: 1.2*$border-thickness;
 
 $title-fonts: Telegrafico;
 $header-fonts: Arial;
-$body-fonts: "Open Sans", "Droid Sans", Dosis, Rosario, "Times New Roman";
+$body-fonts:  Telegrafico, "Times New Roman";
 
 @include font-face(Telegrafico, font-files("/assets/fonts/telegrafico.woff", "/assets/fonts/telegrafico.eot", "/assets/fonts/telegrafico.ttf", "/assets/fonts/telegrafico.svg"));
 @include font-face(Rosario, font-files("/assets/fonts/rosario-regular-webfont.woff", "/assets/fonts/rosario-regular-webfont.eot", "/assets/fonts/rosario-regular-webfont.ttf", "/assets/fonts/rosario-regular-webfont.svg"));
+@include font-face(Bonveno, font-files("/assets/fonts/BonvenoCF-Light-webfont.woff", "/assets/fonts/BonvenoCF-Light-webfont.eot", "/assets/fonts/BonvenoCF-Light-webfont.ttf", "/assets/fonts/BonvenoCF-Light-webfont.svg"));
+@include font-face("Highway Gothic", font-files("/assets/fonts/hwygoth-webfont.woff", "/assets/fonts/hwygoth-webfont.eot", "/assets/fonts/hwygoth-webfont.ttf", "/assets/fonts/hwygoth-webfont.svg"));
+@include font-face(Neutraface, font-files("/assets/fonts/neutra2text-light-webfont.woff", "/assets/fonts/neutra2text-light-webfont.eot", "/assets/fonts/neutra2text-light-webfont.ttf", "/assets/fonts/neutra2text-light-webfont.svg"));
+
 
 @mixin content-box {
 	background-color: $off-white;
@@ -49,10 +53,11 @@ $body-fonts: "Open Sans", "Droid Sans", Dosis, Rosario, "Times New Roman";
 	font-family: $body-fonts;
 	font-size: $body-font-size;
 	padding: 0 1em .5em 1em;
-	@include border-radius($content-box-radius);
+	// @include border-radius($content-box-radius);
 	h1 {
 		color: $font-black;
 		font-size: $title-font-size;
+		font-weight: 400;
 		text-align: left;
 		margin-top: .5rem;
 		margin-bottom: .5rem;
@@ -60,13 +65,15 @@ $body-fonts: "Open Sans", "Droid Sans", Dosis, Rosario, "Times New Roman";
 	h2 {
 		color: $font-gray;
 		font-size: $section-font-size;
-		font-weight: 500;
+		font-weight: 300;
 		text-align: left;
 		margin-top: .45rem;
 		margin-bottom: .45rem;
 	}
 	p {
+		// letter-spacing: .05em;
 		text-align: left;
+		font-weight: 300;
 		margin-top: .35rem;
 		margin-bottom: .35rem;
 	}
@@ -94,12 +101,13 @@ body {
 				@include push(4);
 				font-size: $headline-font-size;
 				clear: both;
+				margin-bottom: .25em;
 			}
 			nav {
 				@include span-columns(8, 16);
 				@include push(4);
-				@include border-bottom-right-radius($nav-tab-radius);
-				@include border-bottom-left-radius($nav-tab-radius);
+				// @include border-bottom-right-radius($nav-tab-radius);
+				// @include border-bottom-left-radius($nav-tab-radius);
 				background-color: $white;
 				height: $nav-height;
 				clear: both;
@@ -111,7 +119,7 @@ body {
 					}
 					&#nav-left {
 						background-color: $blue;
-						@include border-bottom-left-radius($nav-tab-radius);
+						// @include border-bottom-left-radius($nav-tab-radius);
 					}
 					&#nav-mid-left {
 						background-color: $green;
@@ -121,7 +129,7 @@ body {
 					}
 					&#nav-right {
 						background-color: $red;
-						@include border-bottom-right-radius($nav-tab-radius);
+						// @include border-bottom-right-radius($nav-tab-radius);
 					}
 					&:hover {
 						height: $nav-hover-height;
@@ -158,11 +166,15 @@ body {
 .projects {
 	border: $border-thickness solid $green;
 }
-.tutorials {
+.interests {
 	border: $border-thickness solid $orange;
 }
 .contact {
 	border: $border-thickness solid $red;
+}
+
+.title-kern {
+	letter-spacing: -.1em;
 }
 
 a {

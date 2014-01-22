@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title><%= page_title(@item) %></title>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Droid+Sans|Armata|Abel|Dosis|Nixie+One">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis|Oswald:400,300">
     <link href="/assets/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
     <link href="/assets/style/screen.css" media="screen, projection" rel="stylesheet">
     <link href="/assets/style/print.css" media="print" rel="stylesheet">    
@@ -27,19 +27,17 @@
   <body>
     <div class="page">
       <header>
-        <a href="/"><div class="title">Ryan Chipman</div></a>
+        <a href="/"><div class="title">R<span class="title-kern">y</span>an Chipman</div></a>
         <nav>
           <a href="/about"><div class="nav-tab" id="nav-left"><p>About Me</p></div></a>
           <a href="/projects"><div class="nav-tab" id="nav-mid-left"><p>Projects</p></div></a>
-          <a href="/tutorials"><div class="nav-tab" id="nav-mid-right"><p>Interests</p></div></a>
+          <a href="/interests"><div class="nav-tab" id="nav-mid-right"><p>Interests</p></div></a>
           <a href="/contact"><div class="nav-tab" id="nav-right"><p>Contact</p></div></a>
         </nav>
       </header>
       <div class="sidebar">
       </div>
-      <div id="main" class="<%= item_category(@item) %>">
-        <%= yield %>
-      </div>
+      <%= yield %>
       <footer class="footer">
       </footer>
     </div>
