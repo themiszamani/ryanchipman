@@ -20,6 +20,7 @@ $green: #7BA825;
 $blue: #3F9BBF;
 $white: #FFF;
 $off-white: #E5E5E5;
+$off-white-inset: #D5D5D5;
 
 /* Dimensions */
 
@@ -60,7 +61,6 @@ $body-fonts:  Telegrafico, "Times New Roman";
 		font-weight: 400;
 		text-align: left;
 		margin-top: .5rem;
-		margin-bottom: .5rem;
 	}
 	h2 {
 		color: $font-gray;
@@ -75,7 +75,14 @@ $body-fonts:  Telegrafico, "Times New Roman";
 		text-align: left;
 		font-weight: 300;
 		margin-top: .35rem;
-		margin-bottom: .35rem;
+		margin-bottom: .45rem;
+	}
+	a {
+		color: $font-black;
+		&:hover {
+			text-decoration: underline;
+			text-decoration-color: $font-black;
+		}
 	}
 }
 
@@ -92,7 +99,7 @@ body {
 	@include border-box-sizing;
 	.page {
 		@include container($total-columns);
-		@include susy-grid-background;
+		// @include susy-grid-background;
 		background-color: $light-gray;
 		padding-bottom: 2.5em;
 		header {
@@ -145,8 +152,30 @@ body {
 			@include span-columns(12,16);
 			@include push(2);
 			@include content-box;
+			h1, h2, h3 {
+				clear: both;
+			}
 			.content-section {
 
+			}
+			.project-box {
+				@include span-columns(5,12);
+				@include push(1);
+				border: 4px inset $green;
+				background-color: $off-white-inset;
+				margin-top: 1em;
+				margin-bottom: 1em;
+				@include with-grid-settings(2,50%,0%,0%) {
+					img {
+						@include span-columns(1);
+					}
+				}
+				p {
+					text-align: center; 
+				}
+				&:hover {
+					opacity: .7;
+				}
 			}
 		}
 		.sidebar {

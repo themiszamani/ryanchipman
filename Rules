@@ -42,6 +42,10 @@ route '/assets/style/*/' do
   item.identifier.chop + '.css'
 end
 
+route '/assets/javascript/*/' do
+  item.identifier.chop + '.js'
+end
+
 route '*' do
   if item.binary?
     item.identifier.chop + '.' + item[:extension]
@@ -66,6 +70,9 @@ compile '/assets/style/*/' do
   filter :sass, Compass.sass_engine_options
   filter :relativize_paths, :type => :css
   # filter :rainpress
+end
+
+compile '/assets/javascript/*/' do
 end
 
 compile '/static/*' do
