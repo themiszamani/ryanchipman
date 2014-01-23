@@ -3,8 +3,8 @@ $(document).ready(function() {
 	extraText.hide();
 
 	$('.project-box').hover(function() {
-		$(this).find('.extra').show();
+		$(this).find('.extra').show("fast");
 	}, function() {
-		$(this).find('.extra').hide();
+		$(this).find('.extra').hide("fast");
 	});
 });
