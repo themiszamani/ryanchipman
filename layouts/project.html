@@ -1,17 +1,17 @@
 <% render 'tab' do %>
 
-<h1><%= @item[:headline] %></h1>
+<h1><a name="" class="anchor"><%= @item[:headline] %></a></h1>
 
-<h2>Overview</h2>
+<h2><a name="" class="anchor">Overview</a></h2>
 <%= content_for(@item, :overview) %>
 
-<h2>Tools</h2>
+<h2><a name="" class="anchor">Tools</a></h2>
 <%= content_for(@item, :tools) %>
 
-<h2>Source</h2>
+<h2><a name="" class="anchor">Source</a></h2>
 <%= content_for(@item, :source) %>
 
-<h2>Project Details</h2>
+<h2><a name="" class="anchor">Project Details</a></h2>
 <%= content_for(@item, :details) || '<p>More details to come...</p>' %>
 
 <% end %>
