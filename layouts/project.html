@@ -1,0 +1,17 @@
+<% render 'tab' do %>
+
+<h1><%= @item[:headline] %></h1>
+
+<h2>Overview</h2>
+<%= content_for(@item, :overview) %>
+
+<h2>Tools</h2>
+<%= content_for(@item, :tools) %>
+
+<h2>Source</h2>
+<%= content_for(@item, :source) %>
+
+<h2>Project Details</h2>
+<%= content_for(@item, :details) || '<p>More details to come...</p>' %>
+
+<% end %>

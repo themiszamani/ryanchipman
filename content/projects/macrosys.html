@@ -1,19 +1,21 @@
 ---
 title: "Macrosys"
+headline: "FMCSA Data Visualizations"
 ---
 
-<h1>FMCSA Data Visualizations</h1>
+<% content_for :overview do %>
+	<p>Last summer (June 2013 - August 2013), I worked for <a href="http://www.macrosysrt.com/" target="_blank"> Macrosys Research &amp; Technology</a> as part of a team working on a DOT contract in Cambridge, MA. The project that I worked on for most of the summer was a set of dynamic, interactive data visualizations. The data to be visualized was records of motor carrier safety violations, and would be embedded in the new website Macrosys had been tasked with building for the FMCSA (Federal Motor Carrier Safety Administration).</p>
+<% end %>
 
-<h2>Overview</h2>
-<p>Last summer (June 2013 - August 2013), I worked for <a href="http://www.macrosysrt.com/" target="_blank"> Macrosys Research &amp; Technology</a> as part of a team working on a DOT contract in Cambridge, MA. The project that I worked on for most of the summer was a set of dynamic, interactive data visualizations. The data to be visualized was records of motor carrier safety violations, and would be embedded in the new website Macrosys had been tasked with building for the FMCSA (Federal Motor Carrier Safety Administration).</p>
+<% content_for :tools do %>
+	<ul>
+		<li>HTML</li>
+		<li>jQuery</li>
+		<li>d3.js</li>
+	</ul>
+	<p>This project used only javascript and HTML. All the data was embedded in the HTML, and I used jQuery for easy extraction of that data. The lion's share of the code, however, used <a href="http://d3js.org" target="_blank">Data-Driven Documents</a>, or d3.js, a powerful data visualization library written by Mike Bostock. In short, d3 allows you to bind sets of data to the DOM, making it easy to leverage CSS, SVG, and HTML to create dynamic, and, as its name suggests, data-driven, visualizations. For more on my experience with d3, check <a href="#d3-review">here</a>.</p>
+<% end %>
 
-<h2>Tools</h2>
-<ul>
-	<li>HTML</li>
-	<li>jQuery</li>
-	<li>d3.js</li>
-</ul>
-<p>This project used only javascript and HTML. All the data was embedded in the HTML, and I used jQuery for easy extraction of that data. The lion's share of the code, however, used <a href="http://d3js.org" target="_blank">Data-Driven Documents</a>, or d3.js, a powerful data visualization library written by Mike Bostock. In short, d3 allows you to bind sets of data to the DOM, making it easy to leverage CSS, SVG, and HTML to create dynamic, and, as its name suggests, data-driven, visualizations. For more on my experience with d3, check <a href="#d3-review">here</a>.</p>
-
-<h2>Project Details</h2>
-<p>More details to come...</p>
+<% content_for :source do %>
+	<p>No source avilable at this time</p>
+<% end %>

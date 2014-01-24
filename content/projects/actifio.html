@@ -1,23 +1,23 @@
 ---
 title: "Actifio"
+headline: "Actifio Mobile"
 ---
 
-<h1>Actifio Mobile</h1>
+<% content_for :overview do %>
+	<p>During the summer between high school and college (June 2012 - August 2012), I had my first development job, working for <a href="http://www.actifio.com" target="_blank">Actifio, Inc</a>. Having just taken AP Computer Science my senior year, I familiarized myself with the Android SDK and put my java skills to work. The app, using Actifio's REST API behind a sleek, clean Android UI, allowed Actifio clients to monitor the status of their copy data.</p>
+<% end %>
 
-<h2>Overview</h2>
-<p>During the summer between high school and college (June 2012 - August 2012), I had my first development job, working for <a href="http://www.actifio.com" target="_blank">Actifio, Inc</a>. Having just taken AP Computer Science my senior year, I familiarized myself with the Android SDK and put my java skills to work. The app, using Actifio's REST API behind a sleek, clean Android UI, allowed Actifio clients to monitor the status of their copy data.</p>
+<% content_for :tools do %>
+	<ul>
+		<li>Java</li>
+		<li>XML</li>
+		<li>Android SDK</li>
+		<li>REST</li>
+	</ul>
+	<p>This project was my first experience with the Android SDK. I developed natively for android, working in Eclipse with the ADT plugin. Since I was interfacing with Actifio's existing backend, Actifio Mobile made use of the same REST API used by Actifio's desktop application.</p>
+<% end %>
 
-<h2>Tools</h2>
-<ul>
-	<li>Java</li>
-	<li>XML</li>
-	<li>Android SDK</li>
-	<li>REST</li>
-</ul>
-<p>This project was my first experience with the Android SDK. I developed natively for android, working in Eclipse with the ADT plugin. Since I was interfacing with Actifio's existing backend, Actifio Mobile made use of the same REST API used by Actifio's desktop application.</p>
-
-<h2>Code</h2>
-<p>The source for this project contained a number of things that I can't share publicly, and so unfortunately it is not on my GitHub...sorry! But really, it wasn't all that interesting anyways. For some much cooler android code, check out my work on <a href="/projects/hubz">BikeHubz</a>.</p>
-
-<h2>Project Details</h2>
-<p>More details to come...</p>
+<% content_for :source do %>
+	<h2>Code</h2>
+	<p>The source for this project contained a number of things that I can't share publicly, and so unfortunately it is not on my GitHub...sorry! But really, it wasn't all that interesting anyways. For some much cooler android code, check out my work on <a href="/projects/hubz">BikeHubz</a>.</p>
+<% end %>

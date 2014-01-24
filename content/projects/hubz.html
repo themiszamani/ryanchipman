@@ -1,23 +1,22 @@
 ---
 title: "BikeHubz"
+headline: "BikeHubz"
 ---
 
-<h1>BikeHubz</h1>
+<% content_for :overview do %>
+	<p>During the Spring of my freshman year (February 2013 - July 2013), I made my first foray into MIT's UROP (Undergraduate Research Opportunity) program, joining a team of four developers and designers at the <a href="http://media.mit.edu" target="_blank">MIT Media Lab</a>. With the concept of "social cycling" as a starting point, we conceived, designed, and implemented a mobile application to facilitate the creation of real-life social networks based on a user's local Hubway stations.</p>
+<% end %>
 
-<h2>Overview</h2>
-<p>During the Spring of my freshman year (February 2013 - July 2013), I made my first foray into MIT's UROP (Undergraduate Research Opportunity) program, joining a team of four developers and designers at the <a href="http://media.mit.edu" target="_blank">MIT Media Lab</a>. With the concept of "social cycling" as a starting point, we conceived, designed, and implemented a mobile application to facilitate the creation of real-life social networks based on a user's local Hubway stations.</p>
+<% content_for :tools do %>
+	<ul>
+		<li>Java</li>
+		<li>XML</li>
+		<li>Android SDK</li>
+		<li>Parse.com</li>
+	</ul>
+	<p>This project found me working with the Android SDK once again; since another team member was developing for iOS, I developed natively for android, working in Eclipse with the ADT plugin. For the backend, we used <a href="http://parse.com" target="_blank">Parse.com</a>, a backend-as-a-service that simplifies sharing a database between various mobile platforms. For more on my experience with Parse.com, check <a href="#parse-review">here</a>.</p>
+<% end %>
 
-<h2>Tools</h2>
-<ul>
-	<li>Java</li>
-	<li>XML</li>
-	<li>Android SDK</li>
-	<li>Parse.com</li>
-</ul>
-<p>This project found me working with the Android SDK once again; since another team member was developing for iOS, I developed natively for android, working in Eclipse with the ADT plugin. For the backend, we used <a href="http://parse.com" target="_blank">Parse.com</a>, a backend-as-a-service that simplifies sharing a database between various mobile platforms. For more on my experience with Parse.com, check <a href="#parse-review">here</a>.</p>
-
-<h2>Code</h2>
-<p>The source for this project can be found in <a href="https://github.com/rychipman/bikehubz-android" target="_blank">this github repo</a>. The code was initially hosted in a repository at school, and I copied it over to github after the project ended for organizational purposes.</p>
-
-<h2>Project Details</h2>
-<p>More details to come...</p>
+<% content_for :source do %>
+	<p>The source for this project can be found in <a href="https://github.com/rychipman/bikehubz-android" target="_blank">this github repo</a>. The code was initially hosted in a repository at school, and I copied it over to github after the project ended for organizational purposes.</p>
+<% end %>

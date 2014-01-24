@@ -99,6 +99,18 @@ compile '/' do
   # filter TypographicalImprovementFilter, TypographicalImprovementFilterParams
 end
 
+compile '/projects/index/' do
+  filter :erb
+  layout 'default'
+  filter :relativize_paths, :type => :html
+end
+
+compile '/projects/*/' do
+  filter :erb
+  layout 'project'
+  filter :relativize_paths, :type => :html
+end
+
 compile '*' do
   filter :erb if item[:is_dynamic]
   case item[:markdown]

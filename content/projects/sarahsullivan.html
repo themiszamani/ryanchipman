@@ -1,25 +1,24 @@
 ---
 title: "Sarah's Site"
+headline: "SarahSullivan.com"
 ---
 
-<h1>SarahSullivan.com</h1>
+<% content_for :overview do %>
+	<p><a href="http://sarahsullivan.com" target="_blank">SarahSullivan.com</a> is the personal website for my girlfriend/best friend/partner in crime Sarah Sullivan. Sarah is a Sophomore in Apparel Design at RISD (Rhode Island School of Design), and I am maintaining and developing her site along with my own. Since both sites are very similar, I will refer you to <a href="/projects/ryanchipman">the page on my site</a> for most of the project details, and post here only the information that is specific to this particular project.</p>
+<% end %>
 
-<h2>Overview</h2>
-<p><a href="http://sarahsullivan.com" target="_blank">SarahSullivan.com</a> is the personal website for my girlfriend/best friend/partner in crime Sarah Sullivan. Sarah is a Sophomore in Apparel Design at RISD (Rhode Island School of Design), and I am maintaining and developing her site along with my own. Since both sites are very similar, I will refer you to <a href="/projects/ryanchipman">the page on my site</a> for most of the project details, and post here only the information that is specific to this particular project.</p>
+<% content_for :tools do %>
+	<ul>
+		<li>HTML</li>
+		<li>Sass</li>
+		<li>Compass</li>
+		<li>Susy</li>
+		<li>Ruby</li>
+		<li>Nanoc</li>
+	</ul>
+	<p>Since it is a reltively small and simple website, I have chosen to use the ruby-based static site generator <a href="http://nanoc.ws" target="_blank">nanoc</a>, written and actively developed by <a href="https://github.com/ddfreyne" target="_blank">Denis Defreyne</a>. On the design side of things, I used Compass and Susy because I wanted the benefits of their CSS helpers and grids, but opted to do the design myself with Sass instad of using scaffolding form frameworks like Blueprint or Bootstrap.</p>
+<% end %>
 
-<h2>Tools</h2>
-<ul>
-	<li>HTML</li>
-	<li>Sass</li>
-	<li>Compass</li>
-	<li>Susy</li>
-	<li>Ruby</li>
-	<li>Nanoc</li>
-</ul>
-<p>Since it is a reltively small and simple website, I have chosen to use the ruby-based static site generator <a href="http://nanoc.ws" target="_blank">nanoc</a>, written and actively developed by <a href="https://github.com/ddfreyne" target="_blank">Denis Defreyne</a>. On the design side of things, I used Compass and Susy because I wanted the benefits of their CSS helpers and grids, but opted to do the design myself with Sass instad of using scaffolding form frameworks like Blueprint or Bootstrap.</p>
-
-<h2>Code</h2>
-<p>The source for this project can be found in <a href="https://github.com/rychipman/sarahsullivan" target="_blank">this github repo</a>.</p>
-
-<h2>Project Details</h2>
-<p>More details to come...</p>
+<% content_for :source do %>
+	<p>The source for this project can be found in <a href="https://github.com/rychipman/sarahsullivan" target="_blank">this github repo</a>.</p>
+<% end %>
